@@ -12,7 +12,7 @@ def run_agent_reasoning_engine(state: AgentState):
 
 tool_executor = ToolExecutor(tools)
 
-def execute_tool(state: AgentState):
+def execute_tools(state: AgentState):
     agent_action = state["agent_outcome"]
     output = tool_executor.invoke(agent_action)
     return {"intermediate_steps": [(agent_action, output)]}

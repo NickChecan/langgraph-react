@@ -2,9 +2,25 @@
 
 ReAct is going to be the reasoning engine for this agent.
 
+```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	agent_reason(agent_reason)
+	act(act)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> agent_reason;
+	act --> agent_reason;
+	agent_reason -.-> act;
+	agent_reason -.-> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+```
+
 ### Install Dependencies
 ```sh
-poetry add langchain langgraph langchain-openai langchainhub black isort python-dotenv grandalf
+poetry add langchain langgraph langchain-openai langchainhub black isort python-dotenv grandalf langchain_community
 ```
 
 ### Environment
