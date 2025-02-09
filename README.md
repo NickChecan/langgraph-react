@@ -1,5 +1,7 @@
 # langgraph-react
 
+ReAct is going to be the reasoning engine for this agent.
+
 ### Install Dependencies
 ```sh
 poetry add langchain langgraph langchain-openai langchainhub black isort python-dotenv grandalf
